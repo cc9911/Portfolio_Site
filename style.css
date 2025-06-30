@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #a97878;
+    color: #332525;
 }
 
 header {
-    background-color: #222;
-    color: white;
+    background-color: #2f2626;
+    color: rgb(168, 140, 140);
     padding: 15px;
     text-align: center;
 }
@@ -43,3 +43,49 @@ ul {
     list-style: none;
     padding: 0;
 }
+    /* Mobile View (Up to 767px) */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    
+    header {
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    img {
+        width: 120px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Tablet View (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 18px;
+    }
+
+    img {
+        width: 140px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
