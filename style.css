@@ -1,21 +1,41 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #a97878;
-    color: #332525;
+/* Branding Colors */
+:root {
+    --primary-color: #065261;
+    --secondary-color: #000000;
+    --background-color: #E3E7ED;
+    --text-color: #333;
+    --accent-color: #e74c3c;
 }
 
+/* General Styles */
+body {
+    
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+     font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/* Header & Navigation */
 header {
-    background-color: #2f2626;
-    color: rgb(168, 140, 140);
-    padding: 15px;
+    background-color: #1B7503;
+    color: white;
     text-align: center;
+    padding: 18px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -26,38 +46,67 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Section Styling */
 section {
     padding: 20px;
     text-align: center;
 }
 
+/* Profile Image */
 img {
     width: 150px;
     border-radius: 50%;
     margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Buttons */
+button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+/* Lists */
 ul {
     list-style: none;
     padding: 0;
 }
-    /* Mobile View (Up to 767px) */
+
+/* Responsive: Mobile */
 @media screen and (max-width: 767px) {
     body {
         font-size: 16px;
     }
-    
+
     header {
-        text-align: center;
         padding: 10px;
     }
 
     nav ul {
         display: block;
         text-align: center;
-        padding: 0;
     }
 
     nav ul li {
@@ -74,7 +123,7 @@ ul {
     }
 }
 
-/* Tablet View (768px - 1023px) */
+/* Responsive: Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     body {
         font-size: 18px;
@@ -88,4 +137,3 @@ ul {
         padding: 20px;
     }
 }
-
