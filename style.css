@@ -1,32 +1,42 @@
-/* Branding Colors */
+/* LIGHT MODE DEFAULT */
 :root {
     --primary-color: #065261;
     --secondary-color: #000000;
     --background-color: #E3E7ED;
     --text-color: #333;
     --accent-color: #e74c3c;
+    --header-color: #1B7503;
+    --button-color: #065261;
+    --button-text-color: white;
 }
 
-/* General Styles */
+/* DARK MODE OVERRIDES */
+body.dark-mode {
+    --primary-color: #ffffff;
+    --secondary-color: #dddddd;
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --accent-color: #43bbeb;
+    --header-color: #121212;
+    --button-color: #333;
+    --button-text-color: #43bbeb;
+}
+
+/* GENERAL STYLES */
 body {
-    
     font-family: 'Open Sans', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
-     font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-  line-height: 1.6;
-  font-size: 18px;
+    font-size: 18px;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header & Navigation */
+/* HEADER & NAVIGATION */
 header {
-    background-color: #1B7503;
+    background-color: var(--header-color);
     color: white;
     text-align: center;
     padding: 18px;
@@ -49,52 +59,42 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Headings */
+/* HEADINGS */
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     color: var(--primary-color);
-    font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
-/* Section Styling */
+/* SECTIONS */
 section {
     padding: 20px;
     text-align: center;
 }
 
-/* Profile Image */
+/* PROFILE IMAGE */
 img {
     width: 150px;
     border-radius: 50%;
-    margin-top: 10px;
+    margin: 10px auto 0;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* Buttons */
+/* BUTTONS */
 button {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #c0392b;
+    background-color: #2980b9;
 }
 
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-    display: block;
-}
-
+/* FORM */
 input, textarea {
     width: 100%;
     padding: 10px;
@@ -103,26 +103,13 @@ input, textarea {
     border-radius: 5px;
 }
 
-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #2980b9;
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
-/* Lists */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-
-/* Fade-In Animation */
+/* FADE-IN ANIMATION */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -131,15 +118,12 @@ ul {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-}   
-/* Responsive: Mobile */
+}
+
+/* RESPONSIVE: MOBILE */
 @media screen and (max-width: 767px) {
     body {
         font-size: 16px;
-    }
-
-    header {
-        padding: 10px;
     }
 
     nav ul {
@@ -161,7 +145,7 @@ ul {
     }
 }
 
-/* Responsive: Tablet */
+/* RESPONSIVE: TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     body {
         font-size: 18px;

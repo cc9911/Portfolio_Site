@@ -86,5 +86,29 @@ document.getElementById("contactForm").addEventListener("submit", function(event
             document.getElementById("successMessage").style.display = "none";
             document.getElementById("contactForm").reset();
         }, 3000);
+        // Dark Mode Toggle Function
+    }
+});
+
+// Dark Mode Toggle Function
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Check for saved user preference
+if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark-mode");
+}
+
+// Toggle Dark Mode on Button Click
+themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    // Save user preference in local storage
+    if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("dark-mode", "enabled");
+        themeToggle.textContent = "☀️ Toggle Light Mode";
+    } else {
+        localStorage.setItem("dark-mode", "disabled");
+        themeToggle.textContent = "🌙 Toggle Dark Mode";
     }
 });
